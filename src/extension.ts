@@ -201,7 +201,7 @@ registerOARFAS(
 registerOARFAS(
 	"Mover",
 	["createMover"],
-	(args) => [...GenericPtrObject(), ["refCount"], ["type"], ["offset"], ["amplitude"], ["speedDivisor"], ["timingOffset"], ["x"], ["y"], ["originX"], ["originY"]],
+	(args) => [...GenericPtrObject(), ["refCount"], ["type"], ["offset"], ["amplitude"], ["speedDivisor"], ["timingOffset"], ["optionalVerticalAmplitude"], ["x"], ["y"], ["originX"], ["originY"]],
 	{},
 );
 
