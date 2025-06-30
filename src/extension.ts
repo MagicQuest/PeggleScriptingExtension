@@ -177,11 +177,12 @@ registerOARFAS(
 	(args) => [...GenericPtrObject(), ["refCount"], ["type"], ["hit"], ["timeSinceHit"], ["hitCount"], ["animationPercent"], ["animationId"]],
 	{
 		"setHit" : makeArgs("function setHit(hit : boolean) : void", "this function sets `hit` and resets the `timeSinceHit`"),
-		"playPegAnimation" : makeArgs("function playPegAnimation(animationId : number) : void", "this function sets `animationPercent` to 1 (which plays the animation BUT not every animation! see `lightUpPeg`), and sets `animationId` to the first parameter's value"),
-		"lightUpPeg" : makeArgs("function lightUpPeg(timeLength : number) : void", "this function plays an animation that not only works differently but **only works on orange pegs!**  \nthis function sets `animationPercent` to 32*`timeLength`-1 and sets `animationId` to 10"),
+		"playPegAnimation" : makeArgs("function playPegAnimation(animationId : number) : void", "this function sets `animationPercent` to 1 (which plays the animation specified with `animationId` BUT it can't play every animation! see `lightUpPeg`), and sets `animationId` to the first parameter's value"),
+		"lightUpPeg" : makeArgs("function lightUpPeg(timeLength : number) : void", "this function plays an animation that not only works differently but **only works on orange pegs!**  \nthis function sets `animationPercent` to 32*`timeLength`-1 and `animationId` to 10"),
 	},
 );
 
+//FloatingText velRotation only works when rotation is not 0!
 registerOARFAS(
 	"FloatingText",
 	["LogicMgr.spawnFloatingText"],
